@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Ostrowski</title>
+    
+    <link rel="stylesheet" href="style-alt.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   
+</head>
+
+
+<body>
+  <nav class="navbar">
+    <div class="navcontent">
+      <div class="logo">
+        <a>Christian Ostrowski</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">About</a></li>
+        <li><a href="resume.html">Experience</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+
+
+    <div class="slide">
+    <div class="content">
+      <div class="images">
+        <img src="img/pastels.jpg">
+        <img src="img/yellow.jpg">
+        <img src="img/carnival.jpg">
+        <img src="img/new.jpg">
+        <img src="img/country.jpg">
+      </div>
+    </div>
+    </div>
+
+<br>
+<div class="container">
+
+  <div id="header"><h1>About me</h1></div>
+  <div id="content1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel nisl ac ante varius interdum. Maecenas ut sem id lectus imperdiet sollicitudin. Praesent sollicitudin libero mollis metus ultricies, eget convallis elit laoreet. Aenean ut augue nec odio malesuada tristique. Fusce ligula nisl, condimentum quis suscipit consequat, tincidunt a felis. Aenean sagittis efficitur neque ac sodales. Aliquam ut erat tincidunt, ullamcorper augue id, posuere augue. Etiam hendrerit vehicula massa, non vulputate arcu gravida vitae. Vestibulum dapibus ultrices diam, non congue mauris lobortis vitae. Donec ligula felis, fermentum eget maximus a, pharetra ac risus. Nulla luctus scelerisque nunc eget elementum.</div>
+  <div id="content2" class="content-img-main-page"></div>
+  <div id="content3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu nulla, nec lacinia magna imperdiet nec. Nullam eget justo velit. Duis turpis dolor, volutpat ac cursus quis, consequat sed nisl. Sed sodales ut turpis sit amet facilisis. Etiam ac arcu eros. Etiam ullamcorper, tortor ut ullamcorper eleifend, erat turpis pulvinar sem, ut porta tellus purus non mi. Nam sed enim pulvinar, convallis elit et, mollis massa. Ut volutpat aliquet ipsum, a elementum tortor malesuada at. Curabitur tincidunt, felis sit amet tristique scelerisque, nibh arcu consectetur libero, quis facilisis sapien lacus eget quam. Cras aliqu</div>
+  <div id="sidearticle1"></div>
+  <div id="article">
+    <a href="https://www.vimmagazinemsu.com">
+      <h1>Vim Magazine</h1>
+      <h2>Read my work in the latest editions of VIM</h2>
+      <em>Published by CO on Nov 3rd, 2020</em>
+    </a>
+    <br><br><hr><br>
+    
+  </div>
+
+
+  <div id="sidearticle2"></div>
+
+
+
+  
+
+    <footer>
+      <hr>
+      <br>
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <ul class="list-inline text-center">
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/christian-ostrowski-89a79212b/">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.instagram.com/christianostrowski/">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://twitter.com/christianostro1?lang=en">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-soundcloud fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <br>
+              <p class="copyright text-muted">Copyright &copy; Christian Ostrowski 2020</p>
+            </div>
+          </div>
+
+      </footer>
+</div>
+
+
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+<script>
+  var indexValue = 0;
+  function slideShow(){
+    setTimeout(slideShow, 3500);
+    var x;
+    const img = document.querySelectorAll(".images img");
+    for(x = 0; x < img.length; x++){
+      img[x].style.display = "none";
+    }
+    indexValue++;
+    if(indexValue > img.length){indexValue = 1}
+    img[indexValue -1].style.display = "block";
+  }
+  slideShow();
+</script>
+
+  
+
+</body>
+
+</html>
+
+
+<!-- .container {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .2fr 1fr 1.5fr 1fr;
+    grid-template-areas: "head head head head" "c1 c1 c1 c1" "c2 c2 c3 c3" "a1 a1 a1 a1"
+  
+      }-->
